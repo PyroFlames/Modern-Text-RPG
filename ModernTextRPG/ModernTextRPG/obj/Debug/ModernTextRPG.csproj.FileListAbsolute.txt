@@ -1,0 +1,7 @@
+G:\Personal Games\Modern ETF Text RPG\Modern-Text-RPG\ModernTextRPG\ModernTextRPG\bin\Debug\ModernTextRPG.exe.config
+G:\Personal Games\Modern ETF Text RPG\Modern-Text-RPG\ModernTextRPG\ModernTextRPG\bin\Debug\ModernTextRPG.exe
+G:\Personal Games\Modern ETF Text RPG\Modern-Text-RPG\ModernTextRPG\ModernTextRPG\bin\Debug\ModernTextRPG.pdb
+G:\Personal Games\Modern ETF Text RPG\Modern-Text-RPG\ModernTextRPG\ModernTextRPG\obj\Debug\ModernTextRPG.csprojResolveAssemblyReference.cache
+G:\Personal Games\Modern ETF Text RPG\Modern-Text-RPG\ModernTextRPG\ModernTextRPG\obj\Debug\ModernTextRPG.csproj.CoreCompileInputs.cache
+G:\Personal Games\Modern ETF Text RPG\Modern-Text-RPG\ModernTextRPG\ModernTextRPG\obj\Debug\ModernTextRPG.exe
+G:\Personal Games\Modern ETF Text RPG\Modern-Text-RPG\ModernTextRPG\ModernTextRPG\obj\Debug\ModernTextRPG.pdb
