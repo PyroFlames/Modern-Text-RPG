@@ -32,21 +32,6 @@ namespace ModernTextRPG
         public static void Exit(LogStates state)
         {
             Log("'File Exited At': " + DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString(), false, state);
-
-            /*
-            switch (state)
-            {
-                case LogStates.Standard:
-                    Log("File Exited At: " + DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString(), false, state);
-                    break;
-                case LogStates.Warning:
-                    Log("File Exited At: " + DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString(), false, state);
-                    break;
-                case LogStates.Error:
-                    Log("File Exited At: " + DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString(), false, state);
-                    break;
-            }
-            */
         }
         public static void Log(string log, bool CheckForCommands, LogStates logstate)
         {

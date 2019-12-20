@@ -14,7 +14,7 @@ namespace ModernTextRPG
 
         private static int FailCounter = 0;
 
-        public static void _Init_()
+        public static void Init()
         {
             CreateGameFolders();
         }
@@ -28,7 +28,7 @@ namespace ModernTextRPG
 
         public static void LoadModFiles()
         {
-
+            //TODO
         }
 
         public static List<DataFile> GetFiles(string binPath)
@@ -220,8 +220,8 @@ namespace ModernTextRPG
 
                 while (isValidDirectory == false)
                 {
-                    Renderer.HudOptions[Renderer.HudElements.mainBorder] = true;
-                    Renderer.Update(false);
+                    //Renderer.HudOptions[Renderer.HudElements.mainBorder] = true;
+                    //Renderer.Update(false);
 
                     string msg = "Please Enter Your Install Path: ";
 
@@ -230,10 +230,10 @@ namespace ModernTextRPG
                     Console.SetCursorPosition((Console.WindowWidth / 2) - (msg.Length / 2) - 1, (Console.WindowHeight / 2) - 4);
                     Console.Write(">");
                     string response = Console.ReadLine();
-                    Renderer.ClearLine(false, (Renderer.WindowWidth / 2) + 16,
-                        new int[] { (Console.WindowWidth / 2) - (msg.Length / 2), (Console.WindowHeight / 2) - 4 });
-                    Renderer.ClearLine(false, (Renderer.WindowWidth),
-                        new int[] { 0, (Console.WindowHeight / 2) - 3 });
+                    //Renderer.ClearLine(false, (Renderer.WindowWidth / 2) + 16,
+                    //    new int[] { (Console.WindowWidth / 2) - (msg.Length / 2), (Console.WindowHeight / 2) - 4 });
+                    //Renderer.ClearLine(false, (Renderer.WindowWidth),
+                    //    new int[] { 0, (Console.WindowHeight / 2) - 3 });
 
                     if (Directory.Exists(response))
                     {
@@ -259,14 +259,14 @@ namespace ModernTextRPG
                     }
                     else
                     {
-                        Renderer.Update(false);
+                        //Renderer.Update(false);
                         Console.SetCursorPosition((Console.WindowWidth / 2) - (msg.Length / 2) + 5, (Console.WindowHeight / 2) - 2);
                         Console.Write("|'Invalid File Path'|");
-                        Thread.Sleep(2 * 1000);
-                        Renderer.ClearLine(false, (Renderer.WindowWidth / 2) + 16,
-                            new int[] { (Console.WindowWidth / 2) - (msg.Length / 2), (Console.WindowHeight / 2) - 2 });
-                        Renderer.ClearLine(false, (Renderer.WindowWidth),
-                            new int[] { 0, (Console.WindowHeight / 2) - 1 });
+                        Program.Sleep(2 * 1000);
+                        //Renderer.ClearLine(false, (Renderer.WindowWidth / 2) + 16,
+                        //    new int[] { (Console.WindowWidth / 2) - (msg.Length / 2), (Console.WindowHeight / 2) - 2 });
+                        //Renderer.ClearLine(false, (Renderer.WindowWidth),
+                        //    new int[] { 0, (Console.WindowHeight / 2) - 1 });
                     }
                 }
 

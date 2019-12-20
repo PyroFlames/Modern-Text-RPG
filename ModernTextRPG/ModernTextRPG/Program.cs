@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ModernTextRPG
@@ -17,26 +18,15 @@ namespace ModernTextRPG
 
             Init();
             Debug._Init_(true, Path.Combine(MainThread.GameFolderPath, "bin", "errorlog.xml"));
-            //Renderer.Init();
-            //MainThread.Init();
+            Renderer.Init();
             FileManager.Init();
             Debug.Clear();
-            //CutSceneManager.Init();
-            //CutSceneManager.PlayScene(1);
-            //MainThread.MainMenu();
-        }
-        static void Init()
-        {
-            Console.Title = "Embers of The Flames RPG";
-            Console.SetWindowSize(1, 1);
-            //Console.SetBufferSize(220, 83);
-            Console.SetBufferSize(Console.LargestWindowWidth - 2, Console.LargestWindowHeight);
-            Console.SetWindowSize(Console.LargestWindowWidth - 2, Console.LargestWindowHeight);
-            Console.ForegroundColor = ConsoleColor.White;
+            CutSceneManager.Init();
+            MainThread.Init();
+            MainThread.MainMenu();
 
-            //Renderer.WindowHeight = Console.BufferHeight;
-            //Renderer.WindowWidth = Console.BufferWidth;
-
+            Console.Clear();
+            
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Common");
@@ -52,8 +42,28 @@ namespace ModernTextRPG
             Console.WriteLine("Legendary");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Mythical");
+            Console.ReadLine();
+            
 
             Console.ReadLine();
+            Exit_Game();
+        }
+        static void Init()
+        {
+            Console.Title = "Embers of The Flames RPG";
+            Console.SetWindowSize(1, 1);
+            //Console.SetBufferSize(220, 83);
+            Console.SetBufferSize(Console.LargestWindowWidth - 2, Console.LargestWindowHeight);
+            Console.SetWindowSize(Console.LargestWindowWidth - 2, Console.LargestWindowHeight);
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Renderer.WindowHeight = Console.BufferHeight;
+            Renderer.WindowWidth = Console.BufferWidth;
+        }
+
+        public static void Sleep(int millisecondstimeout)
+        {
+            Thread.Sleep(millisecondstimeout);
         }
         public static void Exit_Game()
         {
